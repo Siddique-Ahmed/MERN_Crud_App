@@ -9,7 +9,7 @@ const UpdateTopic = () => {
   const navigate = useNavigate();
 
   const getData = async () => {
-    let data = await fetch(`https://crud-api-five-mauve.vercel.app//topics/${params.id}`);
+    let data = await fetch(`https://crud-api-five-mauve.vercel.app//topics/${params.id}` , {mode : "no-cors"});
     data = await data.json();
 
     const { title, description } = data;

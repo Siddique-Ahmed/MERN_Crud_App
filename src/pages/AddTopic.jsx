@@ -16,7 +16,7 @@ const AddTopic = () => {
       headers: {
         "Content-Type": "application/json",
       },
-    });
+    },{mode : "no-cors"});
 
     if (data) {
       navigate("/");
