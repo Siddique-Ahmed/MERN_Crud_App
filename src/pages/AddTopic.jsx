@@ -10,7 +10,7 @@ const AddTopic = () => {
   const handleData = async (e) => {
     e.preventDefault();
 
-    const data = await fetch("http://localhost:4000/addTopic", {
+    const data = await fetch("crud-api-navy.vercel.app/addTopic", {
       method: "POST",
       body: JSON.stringify({ title, description }),
       headers: {
