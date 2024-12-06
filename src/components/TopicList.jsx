@@ -6,7 +6,7 @@ const TopicList = () => {
   const [topic, setTopic] = useState();
 
   const getTopics = async () => {
-    let topics = await fetch("crud-api-navy.vercel.app/topics");
+    let topics = await fetch("https://crud-api-five-mauve.vercel.app//topics");
     topics = await topics.json();
     setTopic(topics);
   };
@@ -16,7 +16,7 @@ const TopicList = () => {
   }, []);
 
   const handleDelete = async (id) => {
-    const data = await fetch(`crud-api-navy.vercel.app/delete/${id}`, {
+    const data = await fetch(`https://crud-api-five-mauve.vercel.app//delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
