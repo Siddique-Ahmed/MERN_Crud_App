@@ -10,7 +10,7 @@ const AddTopic = () => {
   const handleData = async (e) => {
     e.preventDefault();
 
-    const data = await fetch("https://crud-api-gilt-three.vercel.app/addTopic", {
+    const data = await fetch("http://localhost:4000/addTopic", {
       method: "POST",
       body: JSON.stringify({ title, description }),
       headers: {
