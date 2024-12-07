@@ -9,7 +9,7 @@ const UpdateTopic = () => {
   const navigate = useNavigate();
 
   const getData = async () => {
-    let data = await fetch(`https://crud-api-five-mauve.vercel.app/${params.id}` , {mode : "no-cors"});
+    let data = await fetch(`https://crud-api-gilt-three.vercel.app/${params.id}`);
     data = await data.json();
 
     const { title, description } = data;
@@ -27,7 +27,7 @@ const UpdateTopic = () => {
       alert("Fields are required!");
       return;
     }
-    let data = await fetch(`https://crud-api-five-mauve.vercel.app/${params.id}`, {
+    let data = await fetch(`https://crud-api-gilt-three.vercel.app/update/${params.id}`, {
       method: "PUT",
       body: JSON.stringify({
         title: updateTitle,
